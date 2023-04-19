@@ -2,29 +2,30 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Book;
 import com.example.demo.repository.BookRepository;
+import com.example.demo.request.Request;
+//import com.example.demo.service.ServiceBook;
+import com.example.demo.response.Response;
+import com.example.demo.service.ServiceBook;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/books")
-@RequiredArgsConstructor
 public class BookRestController {
 
-    private final BookRepository repository;
+    @Autowired(required = true)
+    private ServiceBook service;
 
 
-    @PostMapping
-    private Book setBook(@RequestBody Book book) {
-
-        return book;
+    @PostMapping("/")
+    private Response addBook(@RequestBody Request request) {
+        return service.add(request);
     }
 
 
-    @GetMapping("/all")
-    private List<Book> getBooks() {
-        return repository.findAll();
-    }
+//    @GetMapping("/{id}")
+//    private Book getBooks(@PathVariable String id) {
+//        return repository.getById(id);
+//    }
 }
