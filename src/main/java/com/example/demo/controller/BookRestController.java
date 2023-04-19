@@ -11,11 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/books")
+//@RequestMapping("/books")
+@RequiredArgsConstructor
 public class BookRestController {
 
-    @Autowired(required = true)
-    private ServiceBook service;
+    private final ServiceBook service;
 
 
     @PostMapping("/")
