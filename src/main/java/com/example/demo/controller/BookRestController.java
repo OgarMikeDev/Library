@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/books")
+@RequiredArgsConstructor
 public class BookRestController {
 
-    @Autowired
-    private BookRepository repository;
+    private final BookRepository repository;
 
 
     @PostMapping("/")
@@ -29,7 +29,7 @@ public class BookRestController {
 
 
     @GetMapping("/{id}")
-    private Book getBooks(@PathVariable Integer id) {
+    private Book getBooks(@PathVariable String id) {
         return repository.getById(id);
     }
 }
