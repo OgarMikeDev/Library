@@ -10,11 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String title;
 
-    private boolean varIsPublic;
+//    private boolean varIsPublic;
 
 
 }
