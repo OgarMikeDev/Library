@@ -7,6 +7,4 @@ import lombok.Setter;
 public class Request {
 
     String title;
-
-//    boolean isPublic;
 }

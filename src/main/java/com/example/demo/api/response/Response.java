@@ -10,5 +10,4 @@ public class Response {
 
     Integer id;
     String title;
-//    boolean isPublic;
 }
