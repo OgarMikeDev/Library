@@ -26,8 +26,8 @@ public class BookRestController {
     }
 
 
-//    @GetMapping("/{id}")
-//    private Book getBooks(@PathVariable String id) {
-//        return repository.getById(id);
-//    }
+    @GetMapping("/{id}")
+    private Book getBooks(@PathVariable String id) {
+        return service.getBookById(String.valueOf(id));
+    }
 }

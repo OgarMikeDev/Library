@@ -19,8 +19,8 @@ public class ServiceBookImpl implements ServiceBook {
         return new Response(book.getId(), book.getTitle());
     }
 
-//    @Override
-//    public String getById(String id) {
-//        return " ";
-//    }
+    @Override
+    public Book getBookById(String id) {
+        return repository.getBookById(Integer.parseInt(id));
+    }
 }
