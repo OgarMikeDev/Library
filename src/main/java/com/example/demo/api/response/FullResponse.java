@@ -8,9 +8,9 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 public class FullResponse {
-    Integer id;
+    private Integer id;
 
-    String title;
+    private String title;
 
-    LocalDateTime dateTime;
+    private LocalDateTime dateAndTimeOfPublication;
 }

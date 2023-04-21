@@ -16,9 +16,7 @@ public class Book {
 
     private String title;
 
-    private LocalDateTime dateTime;
-
-    private Integer dateIOsIssue;
+    private LocalDateTime dateAndTimeOfPublication;
 
 
 }

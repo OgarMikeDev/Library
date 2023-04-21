@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.api.request.Request;
 //import com.example.demo.service.ServiceBook;
+import com.example.demo.api.response.FullResponse;
 import com.example.demo.api.response.Response;
 import com.example.demo.model.Book;
 import com.example.demo.repository.BookRepository;
@@ -27,7 +28,7 @@ public class BookRestController {
 
 
     @GetMapping("/{id}")
-    private void getBooks(@PathVariable String id) {
-        service.getBookById(String.valueOf(id));
+    private FullResponse getBooks(@PathVariable String id) {
+        return service.getBookById(String.valueOf(id));
     }
 }

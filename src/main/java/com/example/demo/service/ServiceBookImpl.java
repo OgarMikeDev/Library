@@ -18,9 +18,9 @@ public class ServiceBookImpl implements ServiceBook {
     public Response add(Request request) {
         Book book = new Book();
         book.setTitle(request.getTitle());
-        book.setDateIOsIssue(request.getDateOfIssue());
+        book.setDateAndTimeOfPublication(LocalDateTime.now());
         repository.save(book);
-        return new Response(book.getId(), book.getTitle(), book.getDateIOsIssue());
+        return new Response(book.getId(), book.getTitle());
     }
 
     @Override

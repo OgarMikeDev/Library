@@ -8,9 +8,6 @@ import lombok.Getter;
 @AllArgsConstructor
 public class Response {
 
-    Integer id;
-
-    String title;
-
-    Integer dateOfIssue;
+    private Integer id;
+    private String title;
 }
