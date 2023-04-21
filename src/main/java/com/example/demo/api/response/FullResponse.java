@@ -12,5 +12,7 @@ public class FullResponse {
 
     private String title;
 
+    private Integer yearOfIssue;
+
     private LocalDateTime dateAndTimeOfPublication;
 }

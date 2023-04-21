@@ -8,4 +8,7 @@ import java.time.LocalDateTime;
 @Data
 public class Request {
     private String title;
+
+    private Integer yearOfIssue;
+
 }
