@@ -2,15 +2,15 @@ package com.example.demo.api.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
+
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
-public class Response {
-
+public class FullResponse {
     Integer id;
 
     String title;
 
-    Integer dateOfIssue;
+    LocalDateTime dateTime;
 }

@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "books")
 @Data
@@ -13,6 +15,10 @@ public class Book {
     private Integer id;
 
     private String title;
+
+    private LocalDateTime dateTime;
+
+    private Integer dateIOsIssue;
 
 
 }

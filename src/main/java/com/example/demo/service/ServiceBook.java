@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.api.request.Request;
+import com.example.demo.api.response.FullResponse;
 import com.example.demo.api.response.Response;
 import com.example.demo.model.Book;
 import org.springframework.stereotype.Service;
@@ -9,5 +10,5 @@ import org.springframework.stereotype.Service;
 public interface ServiceBook {
     Response add(Request request);
 
-    Book getBookById(String id);
+    FullResponse getBookById(String id);
 }

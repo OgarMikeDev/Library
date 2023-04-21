@@ -27,7 +27,7 @@ public class BookRestController {
 
 
     @GetMapping("/{id}")
-    private Book getBooks(@PathVariable String id) {
-        return service.getBookById(String.valueOf(id));
+    private void getBooks(@PathVariable String id) {
+        service.getBookById(String.valueOf(id));
     }
 }

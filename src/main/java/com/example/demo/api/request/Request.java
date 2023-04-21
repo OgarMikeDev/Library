@@ -7,4 +7,6 @@ import lombok.Setter;
 public class Request {
 
     String title;
+
+    Integer dateOfIssue;
 }
