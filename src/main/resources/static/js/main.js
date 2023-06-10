@@ -9,8 +9,8 @@ $(function() {
 //  //Loading books on load page
 //  $.get("/books/", function(response) {
 //         for(i in response) {
+//         console.log("Number huy: " + i);
 //             appendBook(response[i]);
-//             console.log("Books loaded!")
 //         }
 //  });
 
@@ -36,6 +36,7 @@ $(function() {
               url: "/books/" + bookId,
               success: function(response) {
                  var yearIsIssue = "<span>Year is issue: " + response.year + "</span>";
+                 console.log("Year is issue book '" + yearIsIssue + "'.");
                  link.parent().append(yearIsIssue);
               },
               error: function(response) {
