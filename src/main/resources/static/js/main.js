@@ -30,6 +30,7 @@ $(function() {
   $(document).on("click", ".book-link", function() {
           var link = $(this);
           var bookId = link.data("id");
+          console.log("You click on link! Get id '" + bookId + "'.")
 
           $.ajax({
               method: "GET",

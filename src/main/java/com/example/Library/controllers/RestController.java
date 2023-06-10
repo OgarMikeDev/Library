@@ -38,7 +38,8 @@ public class RestController {
     public ResponseEntity getBook(@PathVariable int id) {
         Optional<Book> optionalBook = bookRepository.findById(id);
         Book book = optionalBook.get();
-        if (optionalBook.isPresent()) {
+        System.out.println("From Java white code '" + book + "'.");
+        if (!optionalBook.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
