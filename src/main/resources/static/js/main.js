@@ -6,14 +6,6 @@ $(function() {
               $("#book-list").append("<div>" + bookCode + "</div>");
   };
 
-  //Loading books on load page
-  $.get("/books/", function(response) {
-         for(i in response) {
-         console.log("Number book: " + i);
-             appendBook(response[i]);
-         }
-  });
-
   //Show adding book form
   $("#show-form-add-book").click(function() {
           $("#book-form").css("display", "flex");

@@ -20,7 +20,9 @@
     <button id="show-form-add-book" class="show-form-add-book">Add book</button>
     <br><br>
     <div id="book-list">
-
+        <div th:each="book : ${books}">
+            <a href="#" class="book-link" th:attr="data-id=${book.id}" th:text="${book.name}"></a>
+        </div>
     </div>
 </section>
 <footer></footer>
