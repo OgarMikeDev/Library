@@ -18,13 +18,13 @@ public class DefaultController {
     @RequestMapping("/")
     public String index(Model model) {
         Iterable<Book> bookIterable = bookRepository.findAll();
-        List<Book> books = new ArrayList<>();
+        List<Book> bookList = new ArrayList<>();
         for (Book book : bookIterable) {
-            books.add(book);
+            bookList.add(book);
         }
 
-        model.addAttribute("books", books);
-        model.addAttribute("bookCounts",books.size());
+        model.addAttribute("books", bookList);
+        model.addAttribute("bookCounts", bookList.size());
 
         return "index";
     }

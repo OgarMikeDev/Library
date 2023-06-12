@@ -9,10 +9,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.time.LocalDate;
+
 @Entity
-@Setter
-@Getter
-@ToString
+@Data
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,4 +21,6 @@ public class Book {
     private String name;
 
     private int year;
+
+    private LocalDate dateBirthAuthor;
 }

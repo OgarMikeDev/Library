@@ -49,6 +49,7 @@ $(function() {
               url: "/books/",
               data: data,
               success: function(response) {
+              console.log("Return response '" + response + "'.");
                   $("#book-form").css("display", "none");
                   var book = {};
                   book.id = response;
@@ -56,10 +57,9 @@ $(function() {
                   for(i in dataArray) {
                       console.log("Number current element '" + i + "' and his value '" + dataArray[i]["value"] + "' added.");
                       book[dataArray[i]["name"]] = dataArray[i]["value"];
+                      console.log("Value book '" + book[dataArray[i]["name"]] + "'.");
                   }
-                  console.log("Name book '" + book.name +
-                  "' and year her is issue '" + book.year + "' added.");
-                  appendBook(book);
+//                  appendBook(book);
               }
           });
           return false;

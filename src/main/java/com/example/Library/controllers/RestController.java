@@ -3,6 +3,7 @@ package com.example.Library.controllers;
 import com.example.Library.model.Book;
 import com.example.Library.repository.BookRepository;
 import com.example.Library.storage.Storage;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +15,9 @@ import java.util.List;
 import java.util.Optional;
 
 @org.springframework.web.bind.annotation.RestController
+@RequiredArgsConstructor
 public class RestController {
+
     @Autowired
     private BookRepository bookRepository;
 
@@ -30,6 +33,7 @@ public class RestController {
 
     @PostMapping("/books/")
     public int add(Book book) {
+        System.out.println("Data about book '".concat(book.toString()).concat("'."));
         Book newBook = bookRepository.save(book);
         return newBook.getId();
     }
