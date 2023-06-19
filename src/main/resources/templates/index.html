@@ -4,6 +4,16 @@
     <title>Library</title>
 </head>
 <body>
+<div class="specific-book-form" id="specific-book-form">
+    <form>
+        <label for="text">Name book:</label>
+        <input type="text" placeholder="Input name book!" name="name-specific-book">
+        <label for="text">Year of issue:</label>
+        <input type="number" id="date-specific-book" placeholder="Input date book!" name="year">
+        <label for="text">Open book:</label>
+        <button id="open-book">Open book</button>
+    </form>
+</div>
 <div class="book-form" id="book-form">
     <form>
         <label for="text">Name book:</label>
@@ -14,7 +24,9 @@
         <button id="save-book">Save book</button>
     </form>
 </div>
-<header></header>
+<header>
+    <button id="window-specific-book" class="window-specific-book">Open book</button>
+</header>
 <section>
     <span>Library(<span th:text="${bookCounts}">0</span>)</span>
     <button id="show-form-add-book" class="show-form-add-book">Add book</button>

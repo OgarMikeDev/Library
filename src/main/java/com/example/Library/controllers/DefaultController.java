@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class DefaultController {
@@ -27,5 +28,18 @@ public class DefaultController {
         model.addAttribute("bookCounts", bookList.size());
 
         return "index";
+    }
+
+    @RequestMapping("/specificBook")
+    public String getSpecificBook(Model modelBook) {
+        Iterable<Book> iterable = bookRepository.findAll();
+        List<Book> bookList = new ArrayList<>();
+        for (Book book : iterable) {
+            bookList.add(book);
+        }
+
+        modelBook.addAttribute("specificBook", bookList.get(1).getName());
+        
+        return "specificBook";
     }
 }

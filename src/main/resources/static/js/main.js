@@ -6,6 +6,11 @@ $(function() {
               $("#book-list").append("<div>" + bookCode + "</div>");
   };
 
+    //Show window specific book form
+    $("#window-specific-book").click(function() {
+            $("#specific-book-form").css("display", "flex");
+    });
+
   //Show adding book form
   $("#show-form-add-book").click(function() {
           $("#book-form").css("display", "flex");
@@ -16,6 +21,11 @@ $(function() {
           if(event.target === this) {
           $(this).css("display", "none");
           }
+  });
+
+  //Open link on page book
+  $("#open-book").click(function() {
+//     "<a href='/specificBook'>"Link on book"</a>";
   });
 
   //Getting book
