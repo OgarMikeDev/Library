@@ -31,12 +31,12 @@ public class DefaultController {
     }
 
     @GetMapping("/specificBookPage")
-    public String getSpecificBook(Book book, Model model) {
+    public String specificBook(Book book, Model model) {
         System.out.println("Book name, input at form for open specific book '" + book.getName() + "'.\nYear book '" + book.getYear() + "'.");
         Iterable<Book> optionalBook = bookRepository.findAll();
         Book updateBook = new Book();
         for (Book currentBook : optionalBook) {
-            if (currentBook.getName().equals(book.getName())) {
+            if (currentBook.getName().equals(book.getName()) && currentBook.getYear() == book.getYear()) {
                 System.out.println("Find book in the library! Her Name '" + currentBook.getName() + "'.");
                 updateBook = currentBook;
                 break;
@@ -44,11 +44,10 @@ public class DefaultController {
             System.out.println(currentBook);
         }
 
-        System.out.println("Name book '" + updateBook.getName() + "'.\nYear book '" + updateBook.getYear() + "'.");
+        System.out.println("Id book '" + updateBook.getId() + "'.\nName book '" + updateBook.getName() + "'.\nYear book '" + updateBook.getYear() + "'.");
         model.addAttribute("specificBookId", updateBook.getId());
         model.addAttribute("specificBookName", updateBook.getName());
         model.addAttribute("specificBookYear", updateBook.getYear());
-
         return "specificBook";
     }
 }
