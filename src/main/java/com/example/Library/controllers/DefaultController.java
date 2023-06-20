@@ -38,7 +38,9 @@ public class DefaultController {
             bookList.add(book);
         }
 
-        modelBook.addAttribute("specificBook", bookList.get(1).getName());
+        modelBook.addAttribute("specificBookId", bookList.get(1).getId());
+        modelBook.addAttribute("specificBookName", bookList.get(1).getName());
+        modelBook.addAttribute("specificBookYear", bookList.get(1).getYear());
         
         return "specificBook";
     }
