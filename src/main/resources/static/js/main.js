@@ -23,10 +23,29 @@ $(function() {
           }
   });
 
-//  //Open link on page book
-//  $("#open-book").click(function() {
-//     "<a href='/specificBook'>"Link on book"</a>";
-//  });
+
+//    //Getting specific book
+//  $("#button-specific-book").click(function() {
+//          var data = $("#specific-book-form form").serialize();
+//          $.ajax({
+//              method: "POST",
+//              url: "/books/",
+//              data: data,
+//              success: function(response) {
+//              console.log("Return response '" + response + "'.");
+//                  $("#book-form").css("display", "none");
+//                  var book = {};
+//                  book.id = response;
+//                  var dataArray = $("#book-form form").serializeArray();
+//                  for(i in dataArray) {
+//                      console.log("Number current element '" + i + "' and his value '" + dataArray[i]["value"] + "' added.");
+//                      book[dataArray[i]["name"]] = dataArray[i]["value"];
+//                      console.log("Value book '" + book[dataArray[i]["name"]] + "'.");
+//                  }
+//              }
+//          });
+//          return false;
+//    });
 
   //Getting book
   $(document).on("click", ".book-link", function() {
@@ -69,7 +88,7 @@ $(function() {
                       book[dataArray[i]["name"]] = dataArray[i]["value"];
                       console.log("Value book '" + book[dataArray[i]["name"]] + "'.");
                   }
-//                  appendBook(book);
+                  appendBook(book);
               }
           });
           return false;
