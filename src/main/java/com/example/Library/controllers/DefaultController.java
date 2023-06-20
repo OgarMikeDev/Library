@@ -31,7 +31,7 @@ public class DefaultController {
         return "index";
     }
 
-    @RequestMapping("/specificBook}")
+    @RequestMapping("/specificBook")
     public String getSpecificBook(Model modelBook) {
 
         Iterable<Book> iterable = bookRepository.findAll();
@@ -40,9 +40,9 @@ public class DefaultController {
             bookList.add(book);
         }
 
-        modelBook.addAttribute("specificBookId", bookList.get(1).getId());
-        modelBook.addAttribute("specificBookName", bookList.get(1).getName());
-        modelBook.addAttribute("specificBookYear", bookList.get(1).getYear());
+        modelBook.addAttribute("specificBookId", bookList.get(bookList.size() - 1).getId());
+        modelBook.addAttribute("specificBookName", bookList.get(bookList.size() - 1).getName());
+        modelBook.addAttribute("specificBookYear", bookList.get(bookList.size() - 1).getYear());
 
         return "specificBook";
     }
