@@ -24,6 +24,11 @@ align-items: center;
 justify-content: center;
 }
 
+.button-specific-book {
+padding: 20px;
+border-radius: 10px;
+}
+
 section {
 border: 1px solid transparent;
 border-radius: 10px;

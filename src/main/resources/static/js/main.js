@@ -23,10 +23,10 @@ $(function() {
           }
   });
 
-  //Open link on page book
-  $("#open-book").click(function() {
+//  //Open link on page book
+//  $("#open-book").click(function() {
 //     "<a href='/specificBook'>"Link on book"</a>";
-  });
+//  });
 
   //Getting book
   $(document).on("click", ".book-link", function() {
